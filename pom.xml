@@ -22,7 +22,14 @@
             <scope>provided</scope>
         </dependency>
         
-        
+   <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.13</version>
+</dependency>
+
+
              <!-- https://mvnrepository.com/artifact/org.glassfish.web/javax.servlet.jsp.jstl -->
         <dependency>
             <groupId>org.glassfish.web</groupId>

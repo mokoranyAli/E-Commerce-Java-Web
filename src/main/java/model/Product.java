@@ -1,104 +1,87 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model;
 
-/**
- *
- * @author hp
- */
 public class Product {
 
-    /**
-     * @return the product_id
-     */
-    public Product(){}
-    public int getProduct_id() {
-        return product_id;
-    }
+	private int ma_san_pham;
+	private int ma_the_loai;
+	private String ten_san_pham;
+	private String hinh_anh;
+	private Double gia_ban;
+	private String hang_san_xuat;
+	private String thong_tin;
 
-    /**
-     * @param product_id the product_id to set
-     */
-    public void setProduct_id(int product_id) {
-        this.product_id = product_id;
-    }
+	public Product() {
+	}
 
-    /**
-     * @return the product_name
-     */
-    public String getProduct_name() {
-        return product_name;
-    }
+	public Product(int ma_san_pham, int ma_the_loai, String ten_san_pham,
+			String hinh_anh, Double gia_ban, String hang_san_xuat,
+			String thong_tin) {
+		this.ma_san_pham = ma_san_pham;
+		this.ma_the_loai = ma_the_loai;
+		this.ten_san_pham = ten_san_pham;
+		this.hinh_anh = hinh_anh;
+		this.gia_ban = gia_ban;
+		this.hang_san_xuat = hang_san_xuat;
+		this.thong_tin = thong_tin;
+	}
 
-    /**
-     * @param product_name the product_name to set
-     */
-    public void setProduct_name(String product_name) {
-        this.product_name = product_name;
-    }
+	public int getMa_san_pham() {
+		return ma_san_pham;
+	}
 
-    /**
-     * @return the product_price
-     */
-    public int getProduct_price() {
-        return product_price;
-    }
+	public void setMa_san_pham(int ma_san_pham) {
+		this.ma_san_pham = ma_san_pham;
+	}
 
-    /**
-     * @param product_price the product_price to set
-     */
-    public void setProduct_price(int product_price) {
-        this.product_price = product_price;
-    }
+	public String getTen_san_pham() {
+		return ten_san_pham;
+	}
 
-    /**
-     * @return the product_type
-     */
-    public String getProduct_type() {
-        return product_type;
-    }
+	public void setTen_san_pham(String ten_san_pham) {
+		this.ten_san_pham = ten_san_pham;
+	}
 
-    /**
-     * @param product_type the product_type to set
-     */
-    public void setProduct_type(String product_type) {
-        this.product_type = product_type;
-    }
+	public String getHinh_anh() {
+		return hinh_anh;
+	}
 
-    /**
-     * @return the product_description
-     */
-    public String getProduct_description() {
-        return product_description;
-    }
+	public void setHinh_anh(String hinh_anh) {
+		this.hinh_anh = hinh_anh;
+	}
 
-    /**
-     * @param product_description the product_description to set
-     */
-    public void setProduct_description(String product_description) {
-        this.product_description = product_description;
-    }
+	public Double getGia_ban() {
+		return gia_ban;
+	}
 
-    /**
-     * @return the product_representation
-     */
-    public String getProduct_representation() {
-        return product_representation;
-    }
+	public void setGia_ban(Double gia_ban) {
+		this.gia_ban = gia_ban;
+	}
 
-    /**
-     * @param product_representation the product_representation to set
-     */
-    public void setProduct_representation(String product_representation) {
-        this.product_representation = product_representation;
-    }
-    private int product_id;
-    private String product_name;
-    private int product_price;
-    private String product_type;
-    private String product_description;
-    private String product_representation;
+	public String getHang_san_xuat() {
+		return hang_san_xuat;
+	}
+
+	public void setHang_san_xuat(String hang_san_xuat) {
+		this.hang_san_xuat = hang_san_xuat;
+	}
+
+	public String getThong_tin() {
+		return thong_tin;
+	}
+
+	public void getThong_tin(String thong_tin) {
+		this.thong_tin = thong_tin;
+	}
+
+
+	public int getMa_the_loai() {
+		return ma_the_loai;
+	}
+
+	public void setMa_the_loai(int ma_the_loai) {
+		this.ma_the_loai = ma_the_loai;
+	}
+
+
 }

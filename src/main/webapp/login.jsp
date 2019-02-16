@@ -1,15 +1,18 @@
-
-<%@page import="dao.UserDAOImpl"%>
-<%@page import="java.sql.ResultSet"%>
+<!--
+Au<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>New Shop a E-Commerce Online Shopping Category Flat Bootstrap Responsive Website Template | Products1 :: w3layouts</title>
+        <title>New Shop a E-Commerce Online Shopping Category Flat Bootstrap Responsive Website Template | Login :: w3layouts</title>
         <!--css-->
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
         <!--css-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -77,6 +80,7 @@
                                                         <ul class="multi-column-dropdown">
                                                             <h6>Categories</h6>
                                                             <li><a href="clothes.html">Clothing</a></li>
+
                                                             <li><a href="shoes.html">Shoes</a></li>
                                                             <li><a href="wallet.html">Wallet</a></li>
 
@@ -84,10 +88,10 @@
                                                     </div>
 
                                                     <div class="col-sm-3  multi-gd-img">
-                                                        <a href="clothes.html"><img src="images/woo4.jpg" alt=" "/></a>
+                                                        <a href="products1.html"><img src="images/woo3.jpg" alt=" "/></a>
                                                     </div> 
                                                     <div class="col-sm-3  multi-gd-img">
-                                                        <a href="clothes.html"><img src="images/woo3.jpg" alt=" "/></a>
+                                                        <a href="products1.html"><img src="images/woo4.jpg" alt=" "/></a>
                                                     </div>
                                                     <div class="clearfix"></div>
                                                 </div>
@@ -130,60 +134,49 @@
         <!--banner-->
         <div class="banner1">
             <div class="container">
-                <h3><a href="index.html">Home</a> / <span>Products</span></h3>
+                <h3><a href="index.html">Home</a> / <span>Login</span></h3>
             </div>
         </div>
         <!--banner-->
+
         <!--content-->
         <div class="content">
-            <div class="products-agileinfo">
-                <h2 class="tittle">Men's Wear</h2>
-                <br><br><br>
-
-                <div class="container">
-                    <%
-                        UserDAOImpl user = new UserDAOImpl();
-                        ResultSet rs = user.getProduct();
-                        if (rs != null) {
-
-                            while(rs.next())
-                            {
-                    %>
-                    <div class="product-tab1">
-                        <div class="col-md-4 product-tab1-grid">
-                            <div class="grid-arr">
-                                <div  class="grid-arrival">
-                                    <figure>		
-                                        <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
-                                            <div class="grid-img">
-
-                                                <img  src=<%=rs.getString(6)%>  class="img-responsive" alt="" width="300" height="400">
-                                            </div>
-
-                                        </a>		
-                                    </figure>	
-                                </div>
+            <!--login-->
+            <div class="login">
+                <div class="main-agileits">
+                    <div class="form-w3agile">
+                        <h3>Login To New Shop</h3>
+                        <form action="LoginServlet" method="post">
+                            <div class="key">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input  type="text" placeholder="Email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                <div class="clearfix"></div>
                             </div>
-                        </div>
-                        <div class="col-md-8 product-tab1-grid1 simpleCart_shelfItem">
-                            <div class="block">
-                                <div class="starbox small ghosting"> </div>
+                            <div class="key">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                <input  type="password" placeholder="Password" name="password"  required>
+                                <div class="clearfix"></div>
                             </div>
-                            <div class="women">
-                                <h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
-                                <span class="size">XL / XXL / S </span>
-                                <p><%=rs.getString(4)%> </p>
-
-                                <p ><del>$100.00</del><em class="item_price">$70.00</em></p>
-                                <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
-                            </div>
-                        </div>
+                            <input type="submit" value="Login">
+                        </form>
+                    </div>
+                    <div class="forg">
+                        <a href="#" class="forg-left">Forgot Password</a>
+                        <a href="registered.html" class="forg-right">Register</a>
                         <div class="clearfix"></div>
                     </div>
-                    <br><br><br>
-                    <%} }%>
+                    
+                    <%
+		String err = "";
+		if (request.getAttribute("err") != null) {
+			err = (String) request.getAttribute("err");
+		}
+	     %>
+             
+            
                 </div>
             </div>
+            <!--login-->
         </div>
         <!--content-->
         <!---footer--->
@@ -213,7 +206,7 @@
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="products.html">Products</a></li>
-
+                            <li><a href="codes.html">Short Codes</a></li>
                             <li><a href="mail.html">Mail Us</a></li>
                             <li><a href="products1.html">products1</a></li>
                         </ul>
@@ -237,7 +230,7 @@
         <div class="copy-section">
             <div class="container">
                 <div class="copy-left">
-                    <p>&copy; 2019 New Shop . All rights reserved</p>
+                    <p>&copy; 2016 New Shop . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
                 </div>
                 <div class="copy-right">
                     <img src="images/card.png" alt=""/>
@@ -246,6 +239,5 @@
             </div>
         </div>
         <!--copy-->
-
     </body>
 </html>
