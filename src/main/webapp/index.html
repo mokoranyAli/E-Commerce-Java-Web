@@ -115,20 +115,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<div class="col-sm-3  multi-gd-img">
 													<ul class="multi-column-dropdown">
 														<h6>Categories</h6>
-														<li><a href="products.html">Clothing</a></li>
+														<li><a href="clothes.html">Clothing</a></li>
 														
-														<li><a href="products1.html">Shoes</a></li>
-														<li><a href="products1.html">Watches</a></li>
+														<li><a href="shoes.html">Shoes</a></li>
+														<li><a href="wallet.html">Wallet</a></li>
 														
 														
 													</ul>
 												</div>
 												
 												<div class="col-sm-3  multi-gd-img">
-														<a href="products1.html"><img src="images/woo3.jpg" alt=" "/></a>
+														<a href="clothes.html"><img src="images/woo3.jpg" alt=" "/></a>
 												</div> 
 												<div class="col-sm-3  multi-gd-img">
-														<a href="products1.html"><img src="images/woo4.jpg" alt=" "/></a>
+														<a href="clothes.html"><img src="images/woo4.jpg" alt=" "/></a>
 												</div>
 												<div class="clearfix"></div>
 											</div>
@@ -168,6 +168,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<!--header-->
+		<!--banner-->
 		<!--banner-->
 		<div class="banner-w3">
 			<div class="demo-1">            
@@ -228,7 +229,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="ban-top">
 								<img src="images/p2.jpg" class="img-responsive" alt=""/>
 								<div class="ban-text1">
-									
+									<h4>Women's Clothing</h4>
 								</div>
 							</div>
 							<div class="ban-img">
@@ -283,7 +284,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
@@ -306,7 +312,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class=" my-cart-b item_add">Add To Cart</a>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
@@ -329,7 +340,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
@@ -349,7 +365,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
 								</div>
 							</div>
 							<div class="clearfix"></div>
@@ -395,7 +416,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="block">
 														<div class="starbox small ghosting"> </div>
 													</div>
-													
+													<div class="women">
+														<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+														<span class="size">XL / XXL / S </span>
+														<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+														<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-md-3 cap-left simpleCart_shelfItem">
@@ -418,7 +444,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="block">
 														<div class="starbox small ghosting"> </div>
 													</div>
-													
+													<div class="women">
+														<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+														<span class="size">XL / XXL / S </span>
+														<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+														<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-md-3 cap-left simpleCart_shelfItem">
@@ -441,7 +472,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="block">
 														<div class="starbox small ghosting"> </div>
 													</div>
-													
+													<div class="women">
+														<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+														<span class="size">XL / XXL / S </span>
+														<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+														<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-md-3 cap-left simpleCart_shelfItem">
@@ -494,7 +530,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="block">
 														<div class="starbox small ghosting"> </div>
 													</div>
-													
+													<div class="women">
+														<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+														<span class="size">XL / XXL / S </span>
+														<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+														<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-md-3 cap-left simpleCart_shelfItem">
@@ -517,7 +558,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="block">
 														<div class="starbox small ghosting"> </div>
 													</div>
-													
+													<div class="women">
+														<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+														<span class="size">XL / XXL / S </span>
+														<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+														<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-md-3 cap-left simpleCart_shelfItem">
@@ -540,7 +586,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="block">
 														<div class="starbox small ghosting"> </div>
 													</div>
-													
+													<div class="women">
+														<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+														<span class="size">XL / XXL / S </span>
+														<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+														<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+													</div>
 												</div>
 											</div>
 											<div class="col-md-3 cap-left simpleCart_shelfItem">
@@ -563,7 +614,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="block">
 														<div class="starbox small ghosting"> </div>
 													</div>
-													
+													<div class="women">
+														<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+														<span class="size">XL / XXL / S </span>
+														<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+														<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+													</div>
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -574,7 +630,84 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 				</div>
-		
+			<!--Products-->
+			<div class="latest-w3">
+				<div class="container">
+					<h3 class="tittle1">Latest Fashion Trends</h3>
+					<div class="latest-grids">
+						<div class="col-md-4 latest-grid">
+							<div class="latest-top">
+								<img  src="images/l1.jpg" class="img-responsive"  alt="">
+								<div class="latest-text">
+									<h4>Men</h4>
+								</div>
+								<div class="latest-text2 hvr-sweep-to-top">
+									<h4>-50%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 latest-grid">
+							<div class="latest-top">
+								<img  src="images/l2.jpg" class="img-responsive"  alt="">
+								<div class="latest-text">
+									<h4>Shoes</h4>
+								</div>
+								<div class="latest-text2 hvr-sweep-to-top">
+									<h4>-20%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 latest-grid">
+							<div class="latest-top">
+								<img  src="images/l3.jpg" class="img-responsive"  alt="">
+								<div class="latest-text">
+									<h4>Women</h4>
+								</div>
+								<div class="latest-text2 hvr-sweep-to-top">
+									<h4>-50%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="latest-grids">
+						<div class="col-md-4 latest-grid">
+							<div class="latest-top">
+								<img  src="images/l4.jpg" class="img-responsive"  alt="">
+								<div class="latest-text">
+									<h4>Watch</h4>
+								</div>
+								<div class="latest-text2 hvr-sweep-to-top">
+									<h4>-45%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 latest-grid">
+							<div class="latest-top">
+								<img  src="images/l5.jpg" class="img-responsive"  alt="">
+								<div class="latest-text">
+									<h4>Bag</h4>
+								</div>
+								<div class="latest-text2 hvr-sweep-to-top">
+									<h4>-10%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 latest-grid">
+							<div class="latest-top">
+								<img  src="images/l6.jpg" class="img-responsive"  alt="">
+								<div class="latest-text">
+									<h4>Cameras</h4>
+								</div>
+								<div class="latest-text2 hvr-sweep-to-top">
+									<h4>-30%</h4>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
 				<div class="new-arrivals-w3agile">
 					<div class="container">
 						<h3 class="tittle1">Best Sellers</h3>
@@ -602,7 +735,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
@@ -625,7 +763,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
@@ -648,7 +791,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
 								</div>
 							</div>
 							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
@@ -671,7 +819,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
-									
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
 								</div>
 							</div>
 							<div class="clearfix"></div>
@@ -743,7 +896,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<img src="images/p5.jpg" class="img-responsive" alt="">
 								</div>
 									<div class="col-md-7 new-grid">
-										
+										<h5>Ten Women's Cotton Viscose fabric Grey Shrug</h5>
 										<h6>Quick Overview</h6>
 										<span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
 										<div class="color-quality">
@@ -973,7 +1126,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>
 											<div class="clearfix"> </div>
 										</div>
-										
+										<div class="women">
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
+										<div class="add">
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Add to Cart</button>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -982,6 +1140,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
-
+	<!--copy-->
+					<div class="copy-section">
+						<div class="container">
+							<div class="copy-left">
+								<p>&copy; 2019 New Shop . All rights reserved</p>
+							</div>
+							<div class="copy-right">
+								<img src="images/card.png" alt=""/>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				<!--copy-->
 </body>
 </html>
