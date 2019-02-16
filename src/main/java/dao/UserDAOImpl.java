@@ -125,6 +125,28 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return user;
 	}
+        @Override
+        public boolean Register (User u)
+        {
+        
+            Connection con = DatabaseConnection.getConnecttion();
+        
+          // if(password.equals(Confirm_Password))
+               
+        try {
+            PreparedStatement pr =  con.prepareStatement(
+                    "INSERT INTO `shopping`.`user`(`user_name`, `user_email`, `user_password`, `role`, `serial_number`) values (?,?,?,?,?)");
+            pr.setString(1, u.getUserName());
+            pr.setString(2, u.getUserEmail());
+            pr.setString(3, u.getUserPassword());
+            pr.setString(4, u.getRole());
+            pr.setString(5, u.getSerialNumber());
+            pr.executeUpdate();
+            pr.close();
+                return true;}
+        catch (Exception e){e.printStackTrace();}
+        return false;
+        }
 
 
 }
