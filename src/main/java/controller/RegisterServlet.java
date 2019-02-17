@@ -40,7 +40,7 @@ public class RegisterServlet extends HttpServlet {
            {
                System.err.println(checkSignIN);
                HttpSession session = request.getSession();
-		   session.setAttribute("user", u);
+	      session.setAttribute("user", u);
                     request.getRequestDispatcher("home.jsp").forward(request, response);
            }
 //          request.setAttribute("user", u);         

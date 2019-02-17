@@ -1,7 +1,6 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -98,6 +97,7 @@ public class UserDAOImpl implements UserDAO {
 		
 	}
 
+        /*
 	@Override
 	public User getUser(String userName) {
 		Connection connection = DatabaseConnection.getConnecttion();
@@ -125,6 +125,7 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return user;
 	}
+*/
         @Override
         public boolean Register (User u)
         {
@@ -148,5 +149,32 @@ public class UserDAOImpl implements UserDAO {
         return false;
         }
 
+
+        
+        @Override
+	public User getUser(String userEmail) {
+		Connection connection = DatabaseConnection.getConnecttion();
+		String sql = "select * from user where user_email='" + userEmail + "'";
+		User user = new User();
+		try {
+			PreparedStatement preparedStatement = (PreparedStatement) connection
+					.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				int user_id= resultSet.getInt("user_id");
+				String user_name = resultSet.getString("user_name");
+                                String user_email = resultSet.getString("user_email");
+				String user_password = resultSet.getString("user_password");
+                                String role = resultSet.getString("role");
+                                String serial_number = resultSet.getString("serial_number");
+                                String user_address = resultSet.getString("user_address");				
+				user = new User(user_id, user_name,user_email,user_password,role,serial_number,user_address);
+			}
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
+	}
 
 }
