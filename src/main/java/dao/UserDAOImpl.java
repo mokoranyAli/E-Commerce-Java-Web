@@ -145,7 +145,7 @@ public class UserDAOImpl implements UserDAO {
             pr.executeUpdate();
             pr.close();
                 return true;}
-        catch (Exception e){e.printStackTrace();}
+        catch (Exception e){return false;}
         return false;
         }
 

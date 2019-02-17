@@ -270,11 +270,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     
                 } 
                 
+                else if (document.loginform.Password.value.length<5)
+                {
+                    alert("Password must atleast 6 charcters");
+                    document.loginform.Password.focus();
+                    
+                } 
+                
                 
                 else {
                     document.loginform.submit();// fire submit event
                     
                 }
+                
             }</script>
     </body>
 </html>

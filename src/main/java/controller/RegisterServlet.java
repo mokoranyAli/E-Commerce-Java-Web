@@ -31,7 +31,6 @@ public class RegisterServlet extends HttpServlet {
              u.setUserEmail(request.getParameter("Email"));
              u.setUserPassword(request.getParameter("Password"));
              u.setRole("User");
-            // u.setUserName(request.getParameter("credit"));
              u.setUserName(request.getParameter("Username"));      
             u.setUserAddress( request.getParameter("address")); 
            // String Confirm_Password = request.getParameter("Confirm_Password");        
@@ -43,7 +42,10 @@ public class RegisterServlet extends HttpServlet {
 	      session.setAttribute("user", u);
                     request.getRequestDispatcher("home.jsp").forward(request, response);
            }
-//          request.setAttribute("user", u);         
+           else {
+         
+           }
+         
          
         } 
 
