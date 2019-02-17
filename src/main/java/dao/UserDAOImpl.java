@@ -54,9 +54,9 @@ public class UserDAOImpl implements UserDAO {
 
   
 	@Override
-	public boolean login(String userName, String userPassword) {
+	public boolean login(String userEmail, String userPassword) {
 		Connection connection = DatabaseConnection.getConnecttion();
-		String sql = "select * from user where user_name='" + userName
+		String sql = "select * from shopping.user where user_email='" + userEmail
 				+ "' and user_password='" + userPassword + "'";
 		PreparedStatement preparedStatement;
 		try {
