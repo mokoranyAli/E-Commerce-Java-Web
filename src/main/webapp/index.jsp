@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="top-right">
 					<ul>
 						<li><a href="checkout.html">Checkout</a></li>
-						<li><a href="login.html">Login</a></li>
+						<li><a href="login.html">${user.userName}</a></li>
 						<li><a href="registered.html"> Create Account </a></li>
 					</ul>
 					</div>
@@ -145,8 +145,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
 							</ul> <!-- cd-header-buttons -->
 							<div id="cd-search" class="cd-search">
-								<form action="#" method="post">
-									<input name="Search" type="search" placeholder="Search...">
+								<form action="SearchServlet" method="post">
+									<input name="SearchField" type="search"  placeholder="Search...">
 								</form>
 							</div>	
 						</div>
