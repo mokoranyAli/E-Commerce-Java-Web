@@ -6,6 +6,8 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
         <title>New Shop a E-Commerce Online Shopping Category Flat Bootstrap Responsive Website Template | Login :: w3layouts</title>
@@ -145,6 +147,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="login">
                 <div class="main-agileits">
                     <div class="form-w3agile">
+                       
+                         
+
                         <h3>Login To New Shop</h3>
                         <form action="LoginServlet" method="post">
                             <div class="key">
@@ -166,14 +171,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="clearfix"></div>
                     </div>
                     
-                    <%
-		String err = "";
-		if (request.getAttribute("err") != null) {
-			err = (String) request.getAttribute("err");
-		}
-	     %>
-             
-            
+                 <c:out value= "${requestScope.err}" />
+                    
+                    
+
+
+
                 </div>
             </div>
             <!--login-->

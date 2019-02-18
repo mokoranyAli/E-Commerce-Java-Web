@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Cart;
+import model.User;
 
 /**
  * Servlet implementation class LoginServlet
@@ -56,50 +57,56 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
 
-        
-		String userEmail = request.getParameter("email");
-		String password = request.getParameter("password");
+        String userEmail = request.getParameter("email");
+        String password = request.getParameter("password");
 
-		String err = "";
-		if (userEmail.equals("") || password.equals("")) {
-			err += "No data enter";
-		} else {
-                    if(userEmail != null && password != null){
-			if (userDAO.login(userEmail, password) == false) {
-				err += "password or username not correct ";
-			}
-		}
+        String err = "";
+        if (userEmail.equals("") || password.equals("")) {
+            err += "No data enter";
+        } else {
+            if (userEmail != null && password != null) {
+                if (userDAO.login(userEmail, password) == false) {
+                    err += "password or username not correct ";
                 }
+            }
+        }
 
-		if (err.length() > 0) {
-			request.setAttribute("err", err);
-		}
+        if (err.length() > 0) {
+            request.setAttribute("err", err);
+        }
 
-		String url = "/login.jsp";
-		try {
-			if (err.length() == 0) {
-		   HttpSession session = request.getSession();
-		   session.setAttribute("userEmail", userEmail);
-		   session.setAttribute("cart", cart);
-		   userDAO.login(userEmail, password);
-		    Cookie loginCookie = new Cookie("userEmail",userEmail);
-	            //setting cookie to expiry in 30 mins
-	            loginCookie.setMaxAge(30*60);
-	            response.addCookie(loginCookie);
-	            response.sendRedirect("index.jsp");
-				url = "/index.jsp";
-			} else {
-				url = "/login.jsp";
-				RequestDispatcher rd = getServletContext()
-						.getRequestDispatcher(url);
-				rd.forward(request, response);
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-			response.sendRedirect("/login.jsp");
-		}
-         
+       
+        try {
+            if (err.length() == 0) {
+                HttpSession session = request.getSession();
+                session.setAttribute("userEmail", userEmail);
+                session.setAttribute("cart", cart);
+                userDAO.login(userEmail, password);
+                Cookie userEmailDuringLogin = new Cookie("userEmail", userEmail);
+                Cookie userPasswordDuringLogin = new Cookie("userPassword", password);
+                userEmailDuringLogin.setMaxAge(30 * 60);
+                userPasswordDuringLogin.setMaxAge(30 * 60);
+                response.addCookie(userEmailDuringLogin);
+                response.addCookie(userPasswordDuringLogin);
+                User user = userDAO.getUser(userEmail);
+                if (user.getRole().equals("user")) {
+                    response.sendRedirect("index.jsp");
+                    
+                } else {
+                    response.sendRedirect("home.jsp");
+                }
+            } else {
+                
+                RequestDispatcher rd = getServletContext()
+                        .getRequestDispatcher("/login.jsp");
+                rd.forward(request, response);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.sendRedirect("/login.jsp");
+        }
+
     }
 
 }

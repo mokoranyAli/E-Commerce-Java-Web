@@ -98,6 +98,7 @@ public class UserDAOImpl implements UserDAO {
 		
 	}
 
+    
 	@Override
 	public User getUser(String userName) {
 		Connection connection = DatabaseConnection.getConnecttion();
@@ -126,6 +127,7 @@ public class UserDAOImpl implements UserDAO {
 		return user;
 	}
 
+
 	public ResultSet getProduct() {
 		Connection connection = DatabaseConnection.getConnecttion();
 		String sql = "select * from shopping.product";
@@ -142,4 +144,5 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return null;
 	}
+
 }

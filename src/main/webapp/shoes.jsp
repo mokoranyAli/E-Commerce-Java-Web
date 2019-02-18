@@ -1,10 +1,10 @@
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="dao.UserDAOImpl"%>
 <%@page import="java.sql.ResultSet"%>
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>New Shop a E-Commerce Online Shopping Category Flat Bootstrap Responsive Website Template | Products1 :: w3layouts</title>
+        <title>New Shop a E-Commerce Online Shopping Category Flat Bootstrap Responsive Website Template</title>
         <!--css-->
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -141,47 +141,48 @@
                 <br><br><br>
 
                 <div class="container">
-                    <%
-                        UserDAOImpl user = new UserDAOImpl();
-                        ResultSet rs = user.getProduct();
-                        if (rs != null) {
+                    <c:forEach items="${list}" var="row">
+                            <c:url var="details" value="/EcommerceProject/ChartServlet">
+                                <c:param name="aslm" value="${row.productId}"></c:param>
+                            </c:url>
+                        <div class="product-tab1">
 
-                            while(rs.next())
-                            {
-                    %>
-                    <div class="product-tab1">
-                        <div class="col-md-4 product-tab1-grid">
-                            <div class="grid-arr">
-                                <div  class="grid-arrival">
-                                    <figure>		
-                                        <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
-                                            <div class="grid-img">
+                            <div class="col-md-4 product-tab1-grid">
+                                
+                                <div class="grid-arr">
+                                    <div  class="grid-arrival">
+                                        <figure>		
+                                            <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                                <div class="grid-img">
 
-                                                <img  src=<%=rs.getString(6)%>  class="img-responsive" alt="" width="300" height="400">
-                                            </div>
+                                                    <img  src=<c:out value="${row.productRepresentation}"/>  class="img-responsive" alt="" width="300" height="400">
+                                                </div>
 
-                                        </a>		
-                                    </figure>	
+                                            </a>		
+                                        </figure>	
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-8 product-tab1-grid1 simpleCart_shelfItem">
-                            <div class="block">
-                                <div class="starbox small ghosting"> </div>
-                            </div>
-                            <div class="women">
-                                <h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
-                                <span class="size">XL / XXL / S </span>
-                                <p><%=rs.getString(4)%> </p>
+                            <div class="col-md-8 product-tab1-grid1 simpleCart_shelfItem">
+                                <div class="block">
+                                    <div class="starbox small ghosting"> </div>
+                                </div>
+                                <div class="women">
+                                    <h6 id="title"><c:out value="${row.productName}"/></h6>
 
-                                <p ><del>$100.00</del><em class="item_price">$70.00</em></p>
-                                <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+                                    <span class="size">XL / XXL / S </span>
+                                    <p><c:out value="${row.productDescription}"/></p>
+
+                                    <p ><del><c:out value="${row.productPrice}"/></del><em class="item_price"></em></p>
+                                    <a href="${details}>
+                                    <button  data-text="Add To Cart" class="my-cart-b item_add" value="">Add To Cart</button>
+                                </a>
+                                </div>
                             </div>
+                            <div class="clearfix"></div>
                         </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <br><br><br>
-                    <%} }%>
+                        <br><br><br>
+                    </c:forEach>
                 </div>
             </div>
         </div>
@@ -246,6 +247,14 @@
             </div>
         </div>
         <!--copy-->
+                                            <script>
+                                        function selectProduct() {
+                                            alert(document.getElementById("title").value);
+                                            document.location.href = "/EcommerceProject/ChartServlet?title=" + document.getElementById("title").value;
+                                        }
+
+                                    </script>
 
     </body>
+
 </html>
