@@ -6,6 +6,7 @@
 package controller;
 
 import dao.ProductDAO;
+import dao.ProductDaoImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -83,7 +84,7 @@ public class ShoesController extends HttpServlet {
         PrintWriter out = response.getWriter();
         
 
-        ProductDAO productDAO = new ProductDAO();
+        ProductDaoImpl productDAO = new ProductDaoImpl();
 
 
             ResultSet rs = productDAO.getProduct();
