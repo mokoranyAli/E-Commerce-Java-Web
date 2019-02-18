@@ -1,7 +1,6 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -98,51 +97,38 @@ public class UserDAOImpl implements UserDAO {
 		
 	}
 
-    
-	@Override
-	public User getUser(String userName) {
-		Connection connection = DatabaseConnection.getConnecttion();
-		String sql = "select * from user where user_name='" + userName + "'";
-		User user = new User();
-		try {
-			PreparedStatement preparedStatement = (PreparedStatement) connection
-					.prepareStatement(sql);
-			ResultSet resultSet = preparedStatement.executeQuery();
-			while (resultSet.next()) {
-				int user_id= resultSet.getInt("user_id");
-				String user_name = resultSet.getString("user_name");
-                                String user_email = resultSet.getString("user_email");
-				String user_password = resultSet.getString("user_password");
-                                String role = resultSet.getString("role");
-                                String serial_number = resultSet.getString("serial_number");
-                                String user_address = resultSet.getString("user_address");
-                                
-				
-				user = new User(user_id, user_name,user_email,user_password,role,serial_number,user_address);
-			}
-			connection.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return user;
-	}
+
+        @Override
+        public boolean Register (User u)
+        {
+        
+            Connection con = DatabaseConnection.getConnecttion();
+        
+          // if(password.equals(Confirm_Password))
+               
+        try {
+            PreparedStatement pr =  con.prepareStatement(
+                    "INSERT INTO `shopping`.`user`(`user_name`, `user_email`, `user_password`, `role`, `serial_number`) values (?,?,?,?,?)");
+            pr.setString(1, u.getUserName());
+            pr.setString(2, u.getUserEmail());
+            pr.setString(3, u.getUserPassword());
+            pr.setString(4, u.getRole());
+            pr.setString(5, u.getSerialNumber());
+            pr.executeUpdate();
+            pr.close();
+                return true;
+        }
+        catch (Exception e){
+            return false;
+        }
+   
+        }
+
+    @Override
+    public User getUser(String userEmail) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
-	public ResultSet getProduct() {
-		Connection connection = DatabaseConnection.getConnecttion();
-		String sql = "select * from shopping.product";
-		PreparedStatement preparedStatement;
-		try {
-			preparedStatement = (PreparedStatement) connection.prepareStatement(sql);
-			ResultSet rs = preparedStatement.executeQuery();
-			if (rs!=null) {
-                            return rs;
-				
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-
+ 
 }

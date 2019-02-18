@@ -10,6 +10,8 @@ public interface UserDAO {
 	public boolean checkUser(String userName);
 	
 	public boolean login(String userName, String userPassword);
+        
+        public boolean Register(User u);
 	
 	public void updateUser(User user);
 	
