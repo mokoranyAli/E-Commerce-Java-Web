@@ -155,7 +155,7 @@
                                             <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
                                                 <div class="grid-img">
 
-                                                    <img  src=<c:out value="${row.productRepresentation}"/>  class="img-responsive" alt="" width="300" height="400">
+                                                    <img  src=<c:out value="${row.productImage}"/>  class="img-responsive" alt="" width="300" height="400">
                                                 </div>
 
                                             </a>		

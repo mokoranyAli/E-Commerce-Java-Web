@@ -98,7 +98,7 @@ public class ShoesController extends HttpServlet {
                         product.setProductPrice(rs.getInt(3));
                         product.setProductType(rs.getString(4));
                         product.setProductDescription(rs.getString(5));
-                        product.setProductRepresentation(rs.getString(6));
+                        product.setProductImage(rs.getString(6));
                         list.add(product);
                     }
                 } catch (SQLException ex) {

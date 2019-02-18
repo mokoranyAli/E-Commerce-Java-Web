@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import java.sql.PreparedStatement;
+import java.sql.Statement;
 
 
 import model.User;
@@ -98,6 +99,8 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 
+
+
         @Override
         public boolean Register (User u)
         {
@@ -114,15 +117,30 @@ public class UserDAOImpl implements UserDAO {
             pr.setString(3, u.getUserPassword());
             pr.setString(4, u.getRole());
             pr.setString(5, u.getSerialNumber());
+            if(checkMail(u.getUserEmail()))
+            {
             pr.executeUpdate();
+            }
             pr.close();
-                return true;
-        }
-        catch (Exception e){
-            return false;
-        }
+
+                return true;}
+        catch (Exception e){return false;}
+       
+
    
         }
+        
+       boolean checkMail(String mail) throws SQLException
+        {  Connection con = DatabaseConnection.getConnecttion();
+        String sql = "select * from shopping.user where user_email= ?";
+        PreparedStatement  statement = con.prepareStatement(sql);
+        statement.setString(1, mail);
+        ResultSet r = statement.executeQuery();
+        con.close();
+        statement.close();
+        return r.first();
+         }
+
 
     @Override
     public User getUser(String userEmail) {

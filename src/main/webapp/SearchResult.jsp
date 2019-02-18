@@ -1,20 +1,21 @@
-<!--
-Au<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
+<%-- 
+    Document   : SearchResult
+    Created on : Feb 17, 2019, 8:41:51 PM
+    Author     : Mohamed
+--%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="dao.UserDAOImpl"%>
+<%@page import="java.sql.ResultSet"%>
+<!DOCTYPE HTML>
 <html>
     <head>
-        <title>New Shop a E-Commerce Online Shopping Category Flat Bootstrap Responsive Website Template | Login :: w3layouts</title>
+        <title>New Shop a E-Commerce Online Shopping Category Flat Bootstrap Responsive Website Template</title>
         <!--css-->
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
         <!--css-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -82,7 +83,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         <ul class="multi-column-dropdown">
                                                             <h6>Categories</h6>
                                                             <li><a href="clothes.html">Clothing</a></li>
-
                                                             <li><a href="shoes.html">Shoes</a></li>
                                                             <li><a href="wallet.html">Wallet</a></li>
 
@@ -90,10 +90,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     </div>
 
                                                     <div class="col-sm-3  multi-gd-img">
-                                                        <a href="products1.html"><img src="images/woo3.jpg" alt=" "/></a>
+                                                        <a href="clothes.html"><img src="images/woo4.jpg" alt=" "/></a>
                                                     </div> 
                                                     <div class="col-sm-3  multi-gd-img">
-                                                        <a href="products1.html"><img src="images/woo4.jpg" alt=" "/></a>
+                                                        <a href="clothes.html"><img src="images/woo3.jpg" alt=" "/></a>
                                                     </div>
                                                     <div class="clearfix"></div>
                                                 </div>
@@ -136,47 +136,61 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--banner-->
         <div class="banner1">
             <div class="container">
-                <h3><a href="index.html">Home</a> / <span>Login</span></h3>
+                <h3><a href="index.html">Home</a> / <span>Products</span></h3>
             </div>
         </div>
         <!--banner-->
-
         <!--content-->
         <div class="content">
-            <!--login-->
-            <div class="login">
-                <div class="main-agileits">
-                    <div class="form-w3agile">
-                       
-                         
+            <div class="products-agileinfo">
+                <h2 class="tittle">Men's Wear</h2>
+                <br><br><br>
 
-                        <h3>Login To New Shop</h3>
-                        <form action="LoginServlet" method="post">
-                            <div class="key">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <input  type="text" placeholder="Email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="key">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                                <input  type="password" placeholder="Password" name="password"  required>
-                                <div class="clearfix"></div>
-                            </div>
-                            <input type="submit" value="Login">
-                        </form>
-                    </div>
-                    <div class="forg">
-                        <a href="#" class="forg-left">Forgot Password</a>
-                        <a href="registered.html" class="forg-right">Register</a>
-                        <div class="clearfix"></div>
-                    </div>
-                    
-                 <c:out value= "${requestScope.err}" />
-                                        
+                <div class="container">
+                    <c:forEach items="${list}" var="row">
+                            <c:url var="details" value="/EcommerceProject/ChartServlet">
+                                <c:param name="aslm" value="${row.productId}"></c:param>
+                            </c:url>
+                        <div class="product-tab1">
 
+                            <div class="col-md-4 product-tab1-grid">
+                                
+                                <div class="grid-arr">
+                                    <div  class="grid-arrival">
+                                        <figure>		
+                                            <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                                <div class="grid-img">
+
+                                                    <img  src=<c:out value="${row.productRepresentation}"/>  class="img-responsive" alt="" width="300" height="400">
+                                                </div>
+
+                                            </a>		
+                                        </figure>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 product-tab1-grid1 simpleCart_shelfItem">
+                                <div class="block">
+                                    <div class="starbox small ghosting"> </div>
+                                </div>
+                                <div class="women">
+                                    <h6 id="title"><c:out value="${row.productName}"/></h6>
+
+                                    <span class="size">XL / XXL / S </span>
+                                    <p><c:out value="${row.productDescription}"/></p>
+
+                                    <p ><del><c:out value="${row.productPrice}"/></del><em class="item_price"></em></p>
+                                    <a href="${details}>
+                                    <button  data-text="Add To Cart" class="my-cart-b item_add" value="">Add To Cart</button>
+                                </a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <br><br><br>
+                    </c:forEach>
                 </div>
             </div>
-            <!--login-->
         </div>
         <!--content-->
         <!---footer--->
@@ -206,7 +220,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="products.html">Products</a></li>
-                            <li><a href="codes.html">Short Codes</a></li>
+
                             <li><a href="mail.html">Mail Us</a></li>
                             <li><a href="products1.html">products1</a></li>
                         </ul>
@@ -230,7 +244,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="copy-section">
             <div class="container">
                 <div class="copy-left">
-                    <p>&copy; 2016 New Shop . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+                    <p>&copy; 2019 New Shop . All rights reserved</p>
                 </div>
                 <div class="copy-right">
                     <img src="images/card.png" alt=""/>
@@ -239,5 +253,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
         <!--copy-->
+                                         
+
     </body>
+
 </html>

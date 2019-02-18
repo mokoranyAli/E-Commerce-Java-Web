@@ -34,16 +34,18 @@ public class RegisterServlet extends HttpServlet {
              u.setUserName(request.getParameter("Username"));      
             u.setUserAddress( request.getParameter("address")); 
            // String Confirm_Password = request.getParameter("Confirm_Password");        
-         boolean checkSignIN =  userDAO.Register(u);        
+         boolean checkSignIN =  userDAO.Register(u);
+         
            if(checkSignIN == true)
            {
                System.err.println(checkSignIN);
                HttpSession session = request.getSession();
-	      session.setAttribute("user", u);
-                    request.getRequestDispatcher("home.jsp").forward(request, response);
+	       session.setAttribute("user", u);
+                    //request.getRequestDispatcher("index.jsp").forward(request, response);
+                    response.sendRedirect("index.jsp");
            }
            else {
-         
+               System.err.println("anything");
            }
          
          
