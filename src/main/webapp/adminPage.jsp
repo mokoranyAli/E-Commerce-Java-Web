@@ -10,9 +10,6 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-        <link rel="stylesheet" href="css/dbStyle.css">
-        <link href="font-awesome-4.4.0/css/font-awesome.css" rel="stylesheet">
-      
         <!--css-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -112,10 +109,6 @@
         <div class="banner1">
             <div class="container">
                 <h3><a href="index.jsp">Home</a> / <span>Admin</span></h3>
-
-
-
-
             </div>
         </div>
         <!--banner-->
@@ -123,62 +116,6 @@
         <div class="content">
             <div class="products-agileinfo">
 
-
-
-                <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4"  style="background-color: #ffffff;opacity:0.9;">       
-                        <br />
-                      
-
-
-                        <div class="col-xs-12 col-sm-12 col-lg-12 no-padding">
-
-                        </div>
-
-
-                        <br /> <br /> 
-                        <div class="container"  id="admin_mode"> </div>
-                        <%--
-                           <label for="id">Product id:</label> 
-                           <input type="text" class="form-control" name="admin_product_id"  required />
-                        --%>
-                               <center>
-                        <form>
-                     
-                                <div > 
-                                    <br /><h3> Select a product to update </h3> 
-                                    <br /> 
-                                    <select name="admin_classifer_choice">
-                                        <option value=""> </option>
-                                        <option value="Books"> Books </option> 
-                                        <option value="Electronics"> Electronics </option>
-                                        <option value="Icecream"> Ice Cream </option> 
-                                    </select> 
-                                    <input type="submit"  value =" > " name="admin_catagory" /> <br /> <br /> 
-                                    <div id="admin_mode"> </div>
-
-
-
-                                    <label for="Name">Quantity :</label> 
-                                    <input type="text" class="form-control" name="product_quantity" required />
-
-
-                                    <label for="Price">Price</label> 
-                                    <input type="text" class="form-control" name="product_price"  required />
-
-                                    <label for="Description">Description:</label> 
-                                    <input type="text" class="form-control" name="product_description" required />
-
-                                    <br /> <br />
-
-                                    <button type="submit" value="Update" name="admin_db_changes" class="btn btn-default" >Update</button>
-
-                                </div>
-                          
-                        </form>
-                                     </center>
-                    </div>
-                </div>
                 <br><br><br>
 
                 <div class="container">
@@ -207,7 +144,7 @@
                     <div class="col-md-3 footer-grid">
                         <h4>My Account</h4>
                         <ul>
-
+                            
                             <li><a href="#"> log out </a></li>
                         </ul>
                     </div>
@@ -224,9 +161,7 @@
                     <div class="col-md-3 footer-grid foot">
                         <h4>Contacts</h4>
                         <ul>
-                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true">
-
-                                </i><a href="#">E Comertown Rd, Westby, USA</a></li>
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="#">E Comertown Rd, Westby, USA</a></li>
                             <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="#">1 599-033-5036</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com"> example@mail.com</a></li>
 

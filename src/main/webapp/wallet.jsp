@@ -10,9 +10,6 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-        <link rel="stylesheet" href="css/dbStyle.css">
-        <link href="font-awesome-4.4.0/css/font-awesome.css" rel="stylesheet">
-      
         <!--css-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -69,13 +66,35 @@
                                 </div> 
                                 <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                                     <ul class="nav navbar-nav">
-
+                                        <li class="active"><a href="index.html" class="act">Home</a></li>	
                                         <!-- Mega Menu -->
 
-                                        <li> <a href="admin_insert.jsp" title="Insert" > <i class="fa fa-plus-circle text-blue fa-2x"> </i> Insert Item </a> </li>
-                                        <li class="active"> <a href="admin_update.jsp" title="Update" > <i class="fa fa-pencil-square text-blue fa-2x"></i> Update Item </a> </li>
-                                        <li class="active"> <a href="admin_remove.jsp" title="Delete" > <i class="fa fa-trash-o text-blue fa-2x "></i> Delete Item</a> </li>                    
-                                        <li class="active"> <a href="admin_view_all.jsp" title="View" > <i class="fa fa-eye text-blue fa-2x"></i>view all  </a> </li> 
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men <b class="caret"></b></a>
+                                            <ul class="dropdown-menu multi-column columns-3">
+                                                <div class="row">
+                                                    <div class="col-sm-3  multi-gd-img">
+                                                        <ul class="multi-column-dropdown">
+                                                            <h6>Categories</h6>
+                                                            <li><a href="ClothesController">Clothing</a></li>							
+							   <li><a href="ShoesController">Shoes</a></li>
+							  <li><a href="WalletController">Wallet</a></li>
+
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="col-sm-3  multi-gd-img">
+                                                        <a href="clothes.html"><img src="images/woo4.jpg" alt=" "/></a>
+                                                    </div> 
+                                                    <div class="col-sm-3  multi-gd-img">
+                                                        <a href="clothes.html"><img src="images/woo3.jpg" alt=" "/></a>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="mail.html">Mail Us</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -111,81 +130,59 @@
         <!--banner-->
         <div class="banner1">
             <div class="container">
-                <h3><a href="index.jsp">Home</a> / <span>Admin</span></h3>
-
-
-
-
+                <h3><a href="index.jsp">Home</a> / <span>Products</span></h3>
             </div>
         </div>
         <!--banner-->
         <!--content-->
         <div class="content">
             <div class="products-agileinfo">
-
-
-
-                <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4"  style="background-color: #ffffff;opacity:0.9;">       
-                        <br />
-                      
-
-
-                        <div class="col-xs-12 col-sm-12 col-lg-12 no-padding">
-
-                        </div>
-
-
-                        <br /> <br /> 
-                        <div class="container"  id="admin_mode"> </div>
-                        <%--
-                           <label for="id">Product id:</label> 
-                           <input type="text" class="form-control" name="admin_product_id"  required />
-                        --%>
-                               <center>
-                        <form>
-                     
-                                <div > 
-                                    <br /><h3> Select a product to update </h3> 
-                                    <br /> 
-                                    <select name="admin_classifer_choice">
-                                        <option value=""> </option>
-                                        <option value="Books"> Books </option> 
-                                        <option value="Electronics"> Electronics </option>
-                                        <option value="Icecream"> Ice Cream </option> 
-                                    </select> 
-                                    <input type="submit"  value =" > " name="admin_catagory" /> <br /> <br /> 
-                                    <div id="admin_mode"> </div>
-
-
-
-                                    <label for="Name">Quantity :</label> 
-                                    <input type="text" class="form-control" name="product_quantity" required />
-
-
-                                    <label for="Price">Price</label> 
-                                    <input type="text" class="form-control" name="product_price"  required />
-
-                                    <label for="Description">Description:</label> 
-                                    <input type="text" class="form-control" name="product_description" required />
-
-                                    <br /> <br />
-
-                                    <button type="submit" value="Update" name="admin_db_changes" class="btn btn-default" >Update</button>
-
-                                </div>
-                          
-                        </form>
-                                     </center>
-                    </div>
-                </div>
+                <h2 class="tittle">Men's Wear</h2>
                 <br><br><br>
 
                 <div class="container">
+                    <c:forEach items="${list}" var="row">
+                            <c:url var="details" value="/EcommerceProject/ChartServlet">
+                                <c:param name="aslm" value="${row.productId}"></c:param>
+                            </c:url>
+                        <div class="product-tab1">
 
+                            <div class="col-md-4 product-tab1-grid">
+                                
+                                <div class="grid-arr">
+                                    <div  class="grid-arrival">
+                                        <figure>		
+                                            <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                                <div class="grid-img">
 
+                                                    <img  src=<c:out value="${row.productImage}"/>  class="img-responsive" alt="" width="300" height="400">
+                                                </div>
 
+                                            </a>		
+                                        </figure>	
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 product-tab1-grid1 simpleCart_shelfItem">
+                                <div class="block">
+                                    <div class="starbox small ghosting"> </div>
+                                </div>
+                                <div class="women">
+                                    <h6 id="title"><c:out value="${row.productName}"/></h6>
 
+                                    <span class="size">XL / XXL / S </span>
+                                    <p><c:out value="${row.productDescription}"/></p>
+
+                                    <p ><del><c:out value="${row.productPrice}"/></del><em class="item_price"></em></p>
+                                    <a href="${details}>
+                                    <button  data-text="Add To Cart" class="my-cart-b item_add" value="">Add To Cart</button>
+                                </a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <br><br><br>
+                    </c:forEach>
                 </div>
             </div>
         </div>
@@ -207,8 +204,9 @@
                     <div class="col-md-3 footer-grid">
                         <h4>My Account</h4>
                         <ul>
-
-                            <li><a href="#"> log out </a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="registered.html"> Create Account </a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 footer-grid">
@@ -224,9 +222,7 @@
                     <div class="col-md-3 footer-grid foot">
                         <h4>Contacts</h4>
                         <ul>
-                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true">
-
-                                </i><a href="#">E Comertown Rd, Westby, USA</a></li>
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="#">E Comertown Rd, Westby, USA</a></li>
                             <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="#">1 599-033-5036</a></li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com"> example@mail.com</a></li>
 
@@ -251,13 +247,13 @@
             </div>
         </div>
         <!--copy-->
-        <script>
-            function selectProduct() {
-                alert(document.getElementById("title").value);
-                document.location.href = "/EcommerceProject/ChartServlet?title=" + document.getElementById("title").value;
-            }
+                                            <script>
+                                        function selectProduct() {
+                                            alert(document.getElementById("title").value);
+                                            document.location.href = "/EcommerceProject/ChartServlet?title=" + document.getElementById("title").value;
+                                        }
 
-        </script>
+                                    </script>
 
     </body>
 

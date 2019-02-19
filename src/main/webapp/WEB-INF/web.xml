@@ -8,6 +8,22 @@
         <servlet-name>ChartServlet</servlet-name>
         <servlet-class>controller.ChartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClothesController</servlet-name>
+        <servlet-class>controller.ClothesController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>WalletController</servlet-name>
+        <servlet-class>controller.WalletController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>controller.SearchServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ShoesController</servlet-name>
         <url-pattern>/ShoesController</url-pattern>
@@ -15,6 +31,22 @@
     <servlet-mapping>
         <servlet-name>ChartServlet</servlet-name>
         <url-pattern>/ChartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LogIn</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClothesController</servlet-name>
+        <url-pattern>/ClothesController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WalletController</servlet-name>
+        <url-pattern>/WalletController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

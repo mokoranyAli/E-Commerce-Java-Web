@@ -81,11 +81,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                     <div class="col-sm-3  multi-gd-img">
                                                         <ul class="multi-column-dropdown">
                                                             <h6>Categories</h6>
-                                                            <li><a href="clothes.html">Clothing</a></li>
-
-                                                            <li><a href="shoes.html">Shoes</a></li>
-                                                            <li><a href="wallet.html">Wallet</a></li>
-
+                                                               <li><a href="ClothesController">Clothing</a></li>							
+							   <li><a href="ShoesController">Shoes</a></li>
+							  <li><a href="WalletController">Wallet</a></li>
                                                         </ul>
                                                     </div>
 
@@ -136,7 +134,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--banner-->
         <div class="banner1">
             <div class="container">
-                <h3><a href="index.html">Home</a> / <span>Login</span></h3>
+                <h3><a href="index.jsp">Home</a> / <span>Login</span></h3>
             </div>
         </div>
         <!--banner-->

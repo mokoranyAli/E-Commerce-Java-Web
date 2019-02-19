@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Product;
@@ -17,7 +18,6 @@ import model.Product;
  *
  * @author Mohamed
  */
-
 public class ProductDaoImpl implements ProductDAO {
 
     public ResultSet getProduct() {
@@ -28,6 +28,7 @@ public class ProductDaoImpl implements ProductDAO {
             preparedStatement = (PreparedStatement) connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             if (rs != null) {
+
                 return rs;
 
             }
@@ -37,16 +38,30 @@ public class ProductDaoImpl implements ProductDAO {
         return null;
     }
 
-    public ResultSet getSearchProducts(String search) {
+    public ArrayList getProductCategorey(String categorey) {
         Connection connection = DatabaseConnection.getConnecttion();
-        String sql = "select * from shopping.product where product_name LIKE ?";
+        String sql = "select * from shopping.product where product_type = ?";
         PreparedStatement preparedStatement;
+        ArrayList<Product> productList = new ArrayList<>();
         try {
             preparedStatement = (PreparedStatement) connection.prepareStatement(sql);
-            preparedStatement.setString(1, "%" + search + "%");
+            preparedStatement.setString(1, categorey);
             ResultSet rs = preparedStatement.executeQuery();
             if (rs != null) {
-                return rs;
+                while (rs.next()) {
+                    Product product = new Product();
+                    product.setProductId(rs.getInt(1));
+                    product.setProductName(rs.getString(2));
+                    product.setProductPrice(rs.getInt(3));
+                    product.setProductType(rs.getString(4));
+                    product.setProductDescription(rs.getString(5));
+                    product.setProductImage(rs.getString(6));
+                    product.setProductQuantity(rs.getInt(7));
+                    productList.add(product);
+
+                }
+
+                return productList;
 
             }
         } catch (SQLException e) {
@@ -55,10 +70,6 @@ public class ProductDaoImpl implements ProductDAO {
         return null;
     }
 
-
-    
-
-   
     @Override
     public void deleteProduct(String productName) {
         try {
@@ -73,7 +84,9 @@ public class ProductDaoImpl implements ProductDAO {
         }
     }
 
-      
-     
-	
+    @Override
+    public ResultSet getSearchProducts(String search) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
