@@ -12,11 +12,8 @@ import model.Product;
  * @author Mohamed
  */
 public interface ProductDAO {
-    public ResultSet getProduct();
     public ResultSet getSearchProducts(String search);
-    public void addProduct(Product p);
-    
-     
-  
+    //public void addProduct(Product p);
+    public void deleteProduct(String productName) ;
 
 }

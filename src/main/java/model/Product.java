@@ -13,9 +13,7 @@ public class Product {
         private int productQuantity;
 
     
-       
-    
-    
+           
  public Product( String productName, int productPrice, String productType, String productDescription, String productImage, int productQuantity) {
      
         this.productName = productName;
