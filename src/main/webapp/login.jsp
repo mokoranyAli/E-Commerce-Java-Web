@@ -172,10 +172,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     
                  <c:out value= "${requestScope.err}" />
-                    
-                    
-
-
+                                        
 
                 </div>
             </div>

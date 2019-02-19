@@ -2,84 +2,104 @@ package model;
 
 public class Product {
 
-	private int ma_san_pham;
-	private int ma_the_loai;
-	private String ten_san_pham;
-	private String hinh_anh;
-	private Double gia_ban;
-	private String hang_san_xuat;
-	private String thong_tin;
+	private int productId ;
+        private String productName;
+        private int productPrice;
+        private String productType;
+        private String productDescription;
+        private String productImage;
+        private int productQuantity;
 
-	public Product() {
-	}
+    
+        
+    public Product(int productId, String productName, int productPrice, String productType, String productDescription, String productImage, int productQuantity) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productType = productType;
+        this.productDescription = productDescription;
+        this.productImage = productImage;
+        this.productQuantity = productQuantity;
+    }
+    
+    
+ public Product( String productName, int productPrice, String productType, String productDescription, String productImage, int productQuantity) {
+     
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productType = productType;
+        this.productDescription = productDescription;
+        this.productImage = productImage;
+        this.productQuantity = productQuantity;
+    }
+    
+  
 
-	public Product(int ma_san_pham, int ma_the_loai, String ten_san_pham,
-			String hinh_anh, Double gia_ban, String hang_san_xuat,
-			String thong_tin) {
-		this.ma_san_pham = ma_san_pham;
-		this.ma_the_loai = ma_the_loai;
-		this.ten_san_pham = ten_san_pham;
-		this.hinh_anh = hinh_anh;
-		this.gia_ban = gia_ban;
-		this.hang_san_xuat = hang_san_xuat;
-		this.thong_tin = thong_tin;
-	}
+    public Product() {
+    }
 
-	public int getMa_san_pham() {
-		return ma_san_pham;
-	}
+    public int getProductId() {
+        return productId;
+    }
 
-	public void setMa_san_pham(int ma_san_pham) {
-		this.ma_san_pham = ma_san_pham;
-	}
+    
+    public int getProductQuantity() {
+        return productQuantity;
+    }
 
-	public String getTen_san_pham() {
-		return ten_san_pham;
-	}
+    public void setProductQuantity(int productQuantity) {
+        this.productQuantity = productQuantity;
+    }
 
-	public void setTen_san_pham(String ten_san_pham) {
-		this.ten_san_pham = ten_san_pham;
-	}
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
 
-	public String getHinh_anh() {
-		return hinh_anh;
-	}
+    public String getProductName() {
+        return productName;
+    }
 
-	public void setHinh_anh(String hinh_anh) {
-		this.hinh_anh = hinh_anh;
-	}
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
-	public Double getGia_ban() {
-		return gia_ban;
-	}
+    public int getProductPrice() {
+        return productPrice;
+    }
 
-	public void setGia_ban(Double gia_ban) {
-		this.gia_ban = gia_ban;
-	}
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
+    }
 
-	public String getHang_san_xuat() {
-		return hang_san_xuat;
-	}
+    public String getProductType() {
+        return productType;
+    }
 
-	public void setHang_san_xuat(String hang_san_xuat) {
-		this.hang_san_xuat = hang_san_xuat;
-	}
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
 
-	public String getThong_tin() {
-		return thong_tin;
-	}
+    public String getProductDescription() {
+        return productDescription;
+    }
 
-	public void getThong_tin(String thong_tin) {
-		this.thong_tin = thong_tin;
-	}
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
 
+    public String getProductImage() {
+        return productImage;
+    }
 
-	public int getMa_the_loai() {
-		return ma_the_loai;
-	}
+    public void setProductImage(String productImage) {
+        this.productImage = productImage;
+    }
+        
+    
+    
+        
+        
 
-	public void setMa_the_loai(int ma_the_loai) {
-		this.ma_the_loai = ma_the_loai;
-	}
+	
 
 }
