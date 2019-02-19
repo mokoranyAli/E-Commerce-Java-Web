@@ -5,10 +5,6 @@
  */
 package model;
 
-/**
- *
- * @author Ismail Elmogy
- */
 public class User {
 
     private int userId;

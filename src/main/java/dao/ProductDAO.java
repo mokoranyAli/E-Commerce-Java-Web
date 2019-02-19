@@ -1,15 +1,22 @@
+
 package dao;
 
-import java.util.List;
-
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import model.Product;
 
+/**
+ *
+ * @author Mohamed
+ */
 public interface ProductDAO {
-
+    public ResultSet getProduct();
+    public ResultSet getSearchProducts(String search);
     public void addProduct(Product p);
-
+    
+     
   
-
- 
 
 }
